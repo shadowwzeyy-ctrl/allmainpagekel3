@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Member Login | Group Directory</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <main class="container">
+
+        <header class="header">
+
+            <a href="index.html" class="logo">
+                GD<span>.</span>
+            </a>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+        </header>
+
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <p class="subtitle">
+                    GROUP DIRECTORY / AUTHENTICATION
+                </p>
+
+                <div class="avatar" id="initial">--</div>
+
+                <h1 id="memberName">MEMBER LOGIN</h1>
+
+                <p class="description">
+                    Enter your credentials to access your profile.
+                </p>
+
+                <div id="unavailable" hidden>
+                    <h3>ACCOUNT NOT AVAILABLE</h3>
+                    <p>Data akun anggota ini belum tersedia.</p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <label for="username">USERNAME</label>
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter username"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">PASSWORD</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit">
+                        ACCESS PROFILE →
+                    </button>
+
+                    <p id="message"></p>
+
+                </form>
+
+                <a href="index.html" class="back-link">
+                    ← BACK TO DIRECTORY
+                </a>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <span>GROUP DIRECTORY © 2026</span>
+            <span>BUILT WITH TECHNOLOGY.</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
