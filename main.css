@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(#ffffff08 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+
+    background-size: 45px 45px;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #777;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #aaa;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #aaa;
+}
+
+.intro {
+    padding: 85px 0 65px;
+    max-width: 650px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1.1;
+}
+
+.intro h1 span {
+    color: #777;
+}
+
+.description {
+    max-width: 450px;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.member-section {
+    padding-bottom: 90px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #252525;
+}
+
+.section-heading h2 {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.section-heading span {
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.member-card {
+    display: block;
+    overflow: hidden;
+
+    background: #101010;
+    border: 1px solid #252525;
+    border-radius: 8px;
+
+    text-decoration: none;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    border-color: #777;
+    transform: translateY(-5px);
+    background: #151515;
+}
+
+.photo-container {
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+
+    background: #171717;
+    border-bottom: 1px solid #252525;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+}
+
+.member-card:hover .photo-container img {
+    transform: scale(1.04);
+}
+
+.member-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.view-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    color: #aaa;
+    font-size: 20px;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-role {
+    color: #666;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.member-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.member-status {
+    display: inline-block;
+
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    padding: 6px 9px;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 25px 0;
+    border-top: 1px solid #222;
+
+    color: #555;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro {
+        padding: 65px 0 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-container {
+        height: 210px;
+    }
+
+    .intro h1 {
+        letter-spacing: -2px;
+    }
+
+    .section-heading span {
+        font-size: 8px;
+    }
+
+    footer {
+        font-size: 8px;
+    }
+}
